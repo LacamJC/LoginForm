@@ -11,6 +11,14 @@ if ($resultados) {
     // Autenticação bem-sucedida
     // Armazene informações do usuário em sessão ou cookie
     // Redirecione para a página de login bem-sucedida
+
+    session_start();
+
+    $_SESSION['username'] = $resultados['user_username'];
+    $_SESSION['password'] = $resultados['user_password'];
+
+    
+
     echo "<script>window.location.href='https://loginform-production.up.railway.app//views/logado/home.php';</script>";
     exit();
 } else {

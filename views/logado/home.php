@@ -4,8 +4,8 @@
 
     session_start();
    
-    $username =  $_SESSION['username'] = $_GET['username'];
-    $password =  $_SESSION['password'] = $_GET['password'];
+    $username =  $_SESSION['username'];
+    $password =  $_SESSION['password'];
     
     
     $sql = 'SELECT * FROM users where user_username = ? and user_password = ? LIMIT 1';
