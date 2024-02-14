@@ -8,24 +8,28 @@
     $username = isset($_SESSION['username']) ? $_SESSION['username'] : null;
     $password = isset($_SESSION['password']) ? $_SESSION['password'] : null;
 
-    if($username !== null){echo "SHOW";}else{echo "NAAAO";}
+    if($username !== null){
+        $sql = 'SELECT * FROM users where user_username = ? and user_password = ? LIMIT 1';
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([$username, $password]);
+        $resultados = $stmt->fetch(PDO::FETCH_ASSOC);
     
-    $sql = 'SELECT * FROM users where user_username = ? and user_password = ? LIMIT 1';
-    $stmt = $conn->prepare($sql);
-    $stmt->execute([$username, $password]);
-    $resultados = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    $info = [];
-    $control = 0;
-    
-    foreach($resultados as $chave => $valor){
-        // echo $chave . $valor;
-        $info[$control] = $valor;
-        $control ++;
+        $info = [];
+        $control = 0;
+        
+        foreach($resultados as $chave => $valor){
+            // echo $chave . $valor;
+            $info[$control] = $valor;
+            $control ++;
+        }
+        
+      
+        $user = $_SESSION['user'] = new Usuario($info[1], $info[2], $info[3], $info[4], $info[5], $info[6]);
+        
+    }else{
+        exit();
     }
     
-  
-    $user = $_SESSION['user'] = new Usuario($info[1], $info[2], $info[3], $info[4], $info[5], $info[6]);
     
     //print_r($user);
 
