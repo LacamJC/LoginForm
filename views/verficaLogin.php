@@ -36,8 +36,8 @@ if($resultados){
 require_once '../connection.php';
 
 // Certifique-se de validar e filtrar as entradas do usuário
-$username = filter_input(INPUT_GET, 'username', FILTER_SANITIZE_STRING);
-$password = filter_input(INPUT_GET, 'password', FILTER_SANITIZE_STRING);
+$username = $_GET['username'];
+$password = $_GET['password'];
 
 $sql = 'SELECT * FROM users WHERE user_username = ? LIMIT 1';
 $stmt = $conn->prepare($sql);
