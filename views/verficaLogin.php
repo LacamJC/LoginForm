@@ -1,4 +1,4 @@
-<?php
+<!-- 
 require_once '../connection.php';
 
 
@@ -30,4 +30,30 @@ if($resultados){
     header("Location: {$_SERVER['HTTP_REFERER']}?mensagem=$mensagem");
     exit();
 
+} -->
+
+<?php
+require_once '../connection.php';
+
+// Certifique-se de validar e filtrar as entradas do usuário
+$username = filter_input(INPUT_GET, 'username', FILTER_SANITIZE_STRING);
+$password = filter_input(INPUT_GET, 'password', FILTER_SANITIZE_STRING);
+
+$sql = 'SELECT * FROM users WHERE user_username = ? LIMIT 1';
+$stmt = $conn->prepare($sql);
+$stmt->execute([$username]);
+$resultados = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if ($resultados && password_verify($password, $resultados['user_password'])) {
+    // Autenticação bem-sucedida
+    // Armazene informações do usuário em sessão ou cookie
+    // Redirecione para a página de login bem-sucedida
+    header("Location: http://localhost/LoginForm/views/logado/home.php");
+    exit();
+} else {
+    // Autenticação falhou
+    $mensagem = "Usuário não encontrado ou senha incorreta";
+    header("Location: http://localhost/LoginForm/views/erro.php?mensagem=" . urlencode($mensagem));
+    exit();
 }
+?>
