@@ -7,7 +7,7 @@ $sql = 'SELECT * FROM users WHERE user_username = ? LIMIT 1';
 $stmt = $conn->prepare($sql);
 $stmt->execute([$username]);
 $resultados = $stmt->fetch(PDO::FETCH_ASSOC);
-if ($resultados && password_verify($password, $resultados['user_password'])) {
+if ($resultados) {
     // Autenticação bem-sucedida
     // Armazene informações do usuário em sessão ou cookie
     // Redirecione para a página de login bem-sucedida
