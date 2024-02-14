@@ -1,12 +1,14 @@
 <?php
+
+    session_start();
     require_once '../../connection.php';
     require_once '../../models/Usuario.php';
 
-    session_start();
    
-    $username =  $_SESSION['username'];
-    $password =  $_SESSION['password'];
-    
+    $username = isset($_SESSION['username']) ? $_SESSION['username'] : null;
+    $password = isset($_SESSION['password']) ? $_SESSION['password'] : null;
+
+    if($username !== null){echo "SHOW";}else{echo "NAAAO";}
     
     $sql = 'SELECT * FROM users where user_username = ? and user_password = ? LIMIT 1';
     $stmt = $conn->prepare($sql);

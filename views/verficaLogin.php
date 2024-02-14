@@ -1,4 +1,5 @@
 <?php
+    session_start();
 require_once '../connection.php';
 // Certifique-se de validar e filtrar as entradas do usuário
 $username = $_GET['username'];
@@ -12,7 +13,7 @@ if ($resultados) {
     // Armazene informações do usuário em sessão ou cookie
     // Redirecione para a página de login bem-sucedida
 
-    session_start();
+
 
     $_SESSION['username'] = $resultados['user_username'];
     $_SESSION['password'] = $resultados['user_password'];
