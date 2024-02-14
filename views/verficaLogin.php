@@ -19,7 +19,9 @@ if ($resultados) {
 } else {
     // Autenticação falhou
     $mensagem = "Usuário não encontrado ou senha incorreta";
-    header("Location: https://loginform-production.up.railway.app//views/erro.php?mensagem=" . urlencode($mensagem));
+    // header("Location: https://loginform-production.up.railway.app//views/erro.php?mensagem=" . urlencode($mensagem));
+
+    echo"<script>window.location.href='https://loginform-production.up.railway.app//views/erro.php?mensagem=".$mensagem."'</script>";
     exit();
 }
 ?>
