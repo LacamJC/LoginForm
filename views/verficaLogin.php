@@ -11,12 +11,12 @@ if ($resultados) {
     // Autenticação bem-sucedida
     // Armazene informações do usuário em sessão ou cookie
     // Redirecione para a página de login bem-sucedida
-    echo "<script>window.location.href='http://localhost/LoginForm/views/logado/home.php';</script>";
+    echo "<script>window.location.href='https://loginform-production.up.railway.app//views/logado/home.php';</script>";
     exit();
 } else {
     // Autenticação falhou
     $mensagem = "Usuário não encontrado ou senha incorreta";
-    header("Location: http://localhost/LoginForm/views/erro.php?mensagem=" . urlencode($mensagem));
+    header("Location: https://loginform-production.up.railway.app//views/erro.php?mensagem=" . urlencode($mensagem));
     exit();
 }
 ?>
