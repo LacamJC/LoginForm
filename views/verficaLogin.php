@@ -11,7 +11,7 @@ if ($resultados && password_verify($password, $resultados['user_password'])) {
     // Autenticação bem-sucedida
     // Armazene informações do usuário em sessão ou cookie
     // Redirecione para a página de login bem-sucedida
-    header("Location: http://localhost/LoginForm/views/logado/home.php");
+    echo "<script>window.location.href='http://localhost/LoginForm/views/logado/home.php';</script>";
     exit();
 } else {
     // Autenticação falhou
