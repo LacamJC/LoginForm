@@ -6,7 +6,7 @@ $username = $_GET['username'];
 $password = $_GET['password'];
 $sql = 'SELECT * FROM users where user_username = ? and user_password = ? LIMIT 1';
 $stmt = $conn->prepare($sql);
-$stmt->execute([$username]);
+$stmt->execute([$username, $password]);
 $resultados = $stmt->fetch(PDO::FETCH_ASSOC);
 if ($resultados) {
     $_SESSION['username'] = $resultados['user_username'];
