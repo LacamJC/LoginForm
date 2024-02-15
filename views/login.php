@@ -1,4 +1,13 @@
+<?php
+    require_once '../models/Usuario.php';
+    session_start();
+    
+    $user = $_SESSION['user'];
+//    print_r($user);
+    
+    
 
+?>
 <!doctype html>
 <html lang="pt-BR">
   <head>
