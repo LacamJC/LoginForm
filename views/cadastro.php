@@ -62,6 +62,7 @@
         </div>
         
          <div class='mb-3'>
+             <label for="">Sex</label>
              <select name='sex' class="form-select" aria-label="Default Select Example">
              <option selected>Select a sex</option>
              <option value='M'>Male</option>
