@@ -41,19 +41,19 @@ try{
    if(!$tableExists)
    {
        $sqlCreateTable='
-            CREATE TABLE users (
+            CREATE TABLE IF NOT EXISTS users (
                 id INT AUTO_INCREMENT PRIMARY KEY,
-                user_username varchar(50) NOT NULL,
-                user_password varchar(8) NOT NULL,
-                user_name varchar(50) NOT NULL,
-                user_age int NOT NULL,
-                user_sex varchar(10),
-                adm TINYINT(1)
+                user_username VARCHAR(50) NOT NULL,
+                user_password VARCHAR(8) NOT NULL,
+                user_name VARCHAR(50) NOT NULL,
+                user_age INT NOT NULL,
+                user_sex VARCHAR(10),
+                adm VARCHAR(10)
             )';
        try{
            $stmtCreateTable = $conn->prepare($sqlCreateTable);
            $stmtCreateTable->execute();
-           echo "Table users criada com sucesso";
+           echo "<br>Table users criada com sucesso<br>";
        }catch(PDOException $e){
            echo "Erro ao criar tabela: " . $e->getMessage();
        }
