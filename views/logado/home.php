@@ -205,7 +205,7 @@
 
       <script type='text/javascript'>
         console.log("ASDDDDDDDDDDDD")
-       url = 'https://loginform-production.up.railway.app//';
+       url = 'https://loginform-production-9cc6.up.railway.app/';
           //  url = 'http://localhost/LoginForm/';
         function getId(id){
             console.log(id)
