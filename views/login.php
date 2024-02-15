@@ -1,13 +1,3 @@
-<?php
-    require_once '../models/Usuario.php';
-    session_start();
-    
-    $user = $_SESSION['user'];
-//    print_r($user);
-    
-    
-
-?>
 
 <!doctype html>
 <html lang="pt-BR">
@@ -26,12 +16,12 @@
           
           <div class='mb-3'>
               <label for='username' class="form-label">Username</label>
-              <input type='text' class='form-control' name='username' value="<?=$user->getUsername()?>">
+              <input type='text' class='form-control' name='username'">
           </div>
           
           <div class='mb-3'>
               <label for='password' class="form-label">Password</label>
-              <input type='password' class='form-control' name='password' id='password' value="<?=$user->getPassword()?>" maxlength='6'>
+              <input type='password' class='form-control' name='password' id='password' maxlength="6">
               <label for="checkOcult">Mostrar Senha</label> <input type="checkbox" name="" id="checkOcult">
           </div>
            <div id='aviso' class='alert' style='height: 50px ; display: flex; justify-content: center; align-items: center;'>
