@@ -3,7 +3,7 @@
     session_start();
     
     $user = $_SESSION['user'];
-    print_r($user);
+//    print_r($user);
     
     
 
@@ -17,27 +17,30 @@
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="shortcut icon" href="../public/img/0-square-fill.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../public/css/all.css">
   </head>
   <body>
      
       <form class='container my-5' method='get' action='verficaLogin.php'>
-          <h1 class='text-center'>Login Form</h1>
+          <h1 class='text-center titulo'>Login Form</h1>
           
           <div class='mb-3'>
-              <label for='username'>Username</label>
+              <label for='username' class="form-label">Username</label>
               <input type='text' class='form-control' name='username' value="<?=$user->getUsername()?>">
           </div>
           
           <div class='mb-3'>
-              <label for='password'>Password</label>
+              <label for='password' class="form-label">Password</label>
               <input type='password' class='form-control' name='password' id='password' value="<?=$user->getPassword()?>">
               <label for="checkOcult">Mostrar Senha</label> <input type="checkbox" name="" id="checkOcult">
           </div>
            <div id='aviso' class='alert' style='height: 50px ; display: flex; justify-content: center; align-items: center;'>
           
            </div>
-          <input type='submit' class='btn btn-primary w-25 text-center' value="Go to profile">
-          <span>Don't have an account? <a href="cadastro.php">Create one now</a></span>
+          <div class="footer">
+            <input type='submit' class='btn btn-primary text-center' value="Go to profile">
+            <span>Don't have an account? <a href="cadastro.php">Create one now</a></span>
+          </div>
       </form>
       <!-- <a href='javascript:history.go(-1)'>Voltar</a> -->
     

@@ -1,0 +1,26 @@
+.titulo{
+    font-size: 1.5rem;
+}
+
+.footer
+{
+    /*background-color: red;*/
+}
+
+@media screen and (max-width:600px)
+{
+    .footer{
+        /*background-color: blue;*/
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .btn
+    {
+        width: 90%;
+    }
+    
+}
