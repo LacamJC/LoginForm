@@ -65,8 +65,8 @@
              <label for="">Sex</label>
              <select name='sex' class="form-select" aria-label="Default Select Example">
              <option selected>Select a sex</option>
-             <option value='M'>Male</option>
-             <option value='F'>Female</option>
+             <option value='Male'>Male</option>
+             <option value='Female'>Female</option>
          </select>
          </div>
          
