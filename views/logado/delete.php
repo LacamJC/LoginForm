@@ -1,7 +1,7 @@
 <?php
  
     require_once '../../connection.php';
-    require_once'../../models/Usuario.php';
+    require_once '../../models/Usuario.php';
    
     session_start();
 //    echo $_SESSION['user']->getId();
