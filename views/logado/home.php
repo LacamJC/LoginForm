@@ -205,16 +205,19 @@
 
       <script type='text/javascript'>
         console.log("ASDDDDDDDDDDDD")
-
+        url = 'https://loginform-production.up.railway.app//';
+          // url = 'http://localhost/LoginForm/';
         function getId(id){
             console.log(id)
-            window.location.href=`http://localhost/LoginForm/views/logado/delete.php?id=${id}`
+            window.location.href=`${url}views/logado/delete.php?id=${id}`
         }
         
         function update(id)
         {
+
+
             console.log("Update data");
-            window.location.href=`http://localhost/LoginForm/views/logado/update.php?id=${id}`;
+            window.location.href=`${url}views/logado/update.php?id=${id}`;
         }
 
         
