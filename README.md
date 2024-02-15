@@ -14,35 +14,37 @@ Este projeto é um sistema CRUD desenvolvido em PHP, utilizando a extensão PDO 
 
 - **Edição de Dados**: Permite a modificação de informações de usuários já existentes, possibilitando a atualização de dados como senha, nome, idade, etc.
 
-
-
 ## Para rodar este projeto localmente
-### - Caso use o xampp procure a pasta htdocs e coloque a pasta deste projeto nela
-### - Você precisa de permissẽs de root no seu banco para para melhor eficiencia
+
+- Caso use o xampp, procure a pasta htdocs e coloque a pasta deste projeto nela.
+- Você precisa de permissões de root no seu banco para melhor eficiência.
 
 ## Altere os dados no arquivo connection.php
+
 ```php
 $username = '<nome_do_seu_usuario>'; // Geralmente é root
- $password = '<senha_do_seu_banco>';
- $dbName = 'LoginForm'; // Mantenha este para criar automaticamente a tabela e o banco
- $port = '3306'; // Esta é a porta padrão mas caso use outra alterar
- $host = '127.0.0.1'; // Este está configurado para o localhost mas caso possua um ip coloque ele aqui
-
+$password = '<senha_do_seu_banco>';
+$dbName = 'LoginForm'; // Mantenha este para criar automaticamente a tabela e o banco
+$port = '3306'; // Esta é a porta padrão, mas caso use outra, altere.
+$host = '127.0.0.1'; // Este está configurado para o localhost, mas caso possua um IP, coloque-o aqui.
 ```
 
 ## Aviso sobre os arquivos
-Quando coloco este projeot no ar utilizo o railway, o que me faz ter que mudar certas configurações em alguns arquivos, certifique-se de que nao deixei estas configurações aqui
+
+Quando coloco este projeto no ar, utilizo o Railway, o que me faz ter que mudar certas configurações em alguns arquivos. Certifique-se de que não deixei estas configurações aqui.
 
 ### Verifique o arquivo verificaLogin.php
-O arquivo deve estar configurado para a url local desta maneira 
+
+O arquivo deve estar configurado para a URL local desta maneira:
+
 ```php
 //$url = 'https://loginform-production.up.railway.app//';
- $url = 'http://localhost/LoginForm/';
+$url = 'http://localhost/LoginForm/';
 ```
 
-
 ### Verifique o arquivo home.php
+
 ```javascript
-    //url = 'https://loginform-production.up.railway.app//';
-    url = 'http://localhost/LoginForm/';
+//url = 'https://loginform-production.up.railway.app//';
+url = 'http://localhost/LoginForm/';
 ```
