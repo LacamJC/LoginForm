@@ -28,7 +28,7 @@
         $stmt->execute([$user->getId(), $user->getUsername(), $user->getPassword(), $user->getName(), $user->getAge(), $user->getSex(), $user->getAdm(), $user->getId()]);
         $resultados = $stmt->fetch(PDO::FETCH_ASSOC);
         // $url = 'http://localhost/LoginForm/views/verficaLogin.php';
-        $url = 'https://loginform-production-9cc6.up.railway.app/LoginForm/views/verficaLogin.php';
+        $url = 'https://loginform-production-9cc6.up.railway.app/views/verficaLogin.php';
 
         if ($_SESSION['user']->getId() == $user->getId()) {
             echo "<br>VOCE ESTA ALTERANDO SEUS PRÓPRIOS DADOS</br>";
