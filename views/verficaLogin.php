@@ -9,7 +9,7 @@ $stmt = $conn->prepare($sql);
 $stmt->execute([$username, $password]);
 $resultados = $stmt->fetch(PDO::FETCH_ASSOC);
 
-$url = 'https://loginform-production.up.railway.app//';
+$url = 'https://loginform-production-9cc6.up.railway.app/';
 //  $url = 'http://localhost/LoginForm/';
 
 if ($resultados) {
