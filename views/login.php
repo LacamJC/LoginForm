@@ -1,13 +1,4 @@
-<?php
-    require_once '../models/Usuario.php';
-    session_start();
-    
-    $user = $_SESSION['user'];
-//    print_r($user);
-    
-    
 
-?>
 <!doctype html>
 <html lang="pt-BR">
   <head>
@@ -20,7 +11,7 @@
   </head>
   <body>
      
-      <form class='container my-5' method='get' action='verficaLogin.php'>
+      <form class='container my-5' method='GET' action='verficaLogin.php'>
           <h1 class='text-center titulo'>Login Form</h1>
           
           <div class='mb-3'>
