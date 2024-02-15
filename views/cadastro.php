@@ -16,7 +16,7 @@
   
            $stmt->execute([$username, $password, $name, $age, $sex]);
            
-           echo "Inserção realizada com sucesso !";
+           echo "Inserção realizada com sucesso vá para a <a href='login.php'>pagina de login!</a>";
            
            
            
@@ -41,22 +41,23 @@
          <h1 class="text-center">Cadastro de Novo Usuário</h1>
         <div class="mb-3">
             <label for="username">Username</label>
-            <input type="text" class="form-control" id="username" name="username">
+            <input type="text" class="form-control" id="username" name="username" required autofocus>
         </div>
         
         <div class="mb-3">
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password">
+            <input type="password" class="form-control" id="password" name="password" required maxlength="6">
+            <label for="checkOcult">Mostrar Senha</label> <input type="checkbox" name="" id="checkOcult">
         </div>
             
         <div class="mb-3">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" name="name">
+            <input type="text" class="form-control" id="name" name="name" required>
         </div>
         
         <div class="mb-3">
             <label for="age">Age</label>
-            <input type="text" class="form-control" id="age" name="age">
+            <input type="number" class="form-control" id="age" name="age" required>
         </div>
         
          <div class='mb-3'>
@@ -66,10 +67,12 @@
              <option value='F'>Female</option>
          </select>
          </div>
-        <input type="submit" class="btn btn-primary w-25 text-center"> <span>Already have an account? <a href="login.php">Log in.</a></span>
+        <input type="submit" class="btn btn-primary w-25 text-center" value="Register"> <span>Already have an account? <a href="login.php">Log in.</a></span>
     </form>
       
-      <a href='javascript:history.go(-1)'>Voltar</a>
+      <!-- <a href='javascript:history.go(-1)'>Voltar</a> -->
+
+    <script src="../public/js/ocultPassword.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
