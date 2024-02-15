@@ -1,3 +1,9 @@
+<?php
+    require_once 'connection.php';
+
+
+?>
+
 <!doctype html>
 <html lang="pt-BR">
   <head>

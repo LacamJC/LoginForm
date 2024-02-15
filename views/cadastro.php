@@ -9,12 +9,13 @@
         $name = $_GET['name'];
         $age = $_GET['age'];
         $sex = $_GET['sex'];
+        $adm = $_GET['adm'];
         
        try{
-           $sql = "INSERT INTO users (user_username, user_password, user_name, user_age, user_sex) VALUES (?,?,?,?,?)";
+           $sql = "INSERT INTO users (user_username, user_password, user_name, user_age, user_sex, adm) VALUES (?,?,?,?,?,?)";
            $stmt = $conn->prepare($sql);
   
-           $stmt->execute([$username, $password, $name, $age, $sex]);
+           $stmt->execute([$username, $password, $name, $age, $sex, $adm]);
            
            echo "Inserção realizada com sucesso vá para a <a href='login.php'>pagina de login!</a>";
            
@@ -66,6 +67,14 @@
              <option value='M'>Male</option>
              <option value='F'>Female</option>
          </select>
+         </div>
+         
+         <div class="mb-3">
+             <label class="form-label">Admin User</label>
+             <select name="adm" class="form-select">
+                 <option value="0" selected>No</option> 
+                 <option value="1">Yes</option>
+             </select>
          </div>
         <input type="submit" class="btn btn-primary w-25 text-center" value="Register"> <span>Already have an account? <a href="login.php">Log in.</a></span>
     </form>
