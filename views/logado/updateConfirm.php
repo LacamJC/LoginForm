@@ -42,7 +42,7 @@
                   </script>";
         } else {
             echo "USER UPDATE SUCCESSFUL";
-            echo "<script>window.location.href='" . $url . "?username=" . $user->getUsername() . "&password=" . $user->getPassword() . "'</script>";
+            echo "<script>window.location.href='" . $url . "?username=" . $_SESSION['username'] . "&password=" . $_SESSION['password'] . "'</script>";
         }
     }else{
         echo "Error";
