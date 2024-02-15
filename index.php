@@ -42,7 +42,8 @@
 
 
         <div class="container my-5">
-          <ul>
+          <h1>CRUD LoginForm With PHP</h1>
+          <ul class='my-5'>
               <a href='views/cadastro.php'>
                   <li class=" fw-bold ">
                     Sign up
