@@ -31,7 +31,7 @@
           
           <div class='mb-3'>
               <label for='password' class="form-label">Password</label>
-              <input type='password' class='form-control' name='password' id='password' value="<?=$user->getPassword()?>">
+              <input type='password' class='form-control' name='password' id='password' value="<?=$user->getPassword()?>" maxlength='6'>
               <label for="checkOcult">Mostrar Senha</label> <input type="checkbox" name="" id="checkOcult">
           </div>
            <div id='aviso' class='alert' style='height: 50px ; display: flex; justify-content: center; align-items: center;'>
