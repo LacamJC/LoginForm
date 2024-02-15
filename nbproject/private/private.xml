@@ -3,11 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/opt/lampp/htdocs/LoginForm/views/logado/home.php</file>
+            <file>file:/opt/lampp/htdocs/LoginForm/connection.php</file>
             <file>file:/opt/lampp/htdocs/LoginForm/views/login.php</file>
-            <file>file:/opt/lampp/htdocs/LoginForm/public/css/all.css</file>
-            <file>file:/opt/lampp/htdocs/LoginForm/views/logado/updateConfirm.php</file>
             <file>file:/opt/lampp/htdocs/LoginForm/views/cadastro.php</file>
+            <file>file:/opt/lampp/htdocs/LoginForm/views/verficaLogin.php</file>
+            <file>file:/opt/lampp/htdocs/LoginForm/index.php</file>
             <file>file:/opt/lampp/htdocs/LoginForm/config.php</file>
         </group>
     </open-files>

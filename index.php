@@ -53,7 +53,7 @@
                     Sign in
                   </li>
               </a>
-              <a href="https://github.com/LacamJC/LoginForm.git">
+              <a href="https://github.com/LacamJC/LoginForm.git" target='_BLANK'>
                 <li class="fw-bold">
                   Github Repository
                 </li>
