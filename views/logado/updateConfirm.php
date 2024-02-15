@@ -9,14 +9,15 @@
     $stmt->execute([$user->getId()]);
     $resultados = $stmt->fetch(PDO::FETCH_ASSOC);
     
-    if($resultados)
-    {
-        echo "Sucessful changes commit at Database";
-        echo "<script>setTimeout(()=>{window.location.href='home.php'},500)</script>";
-    }else{
-        echo "Error";
+    $url = '';
+    // if($resultados)
+    // {
+    //     echo "Sucessful changes commit at Database";
+    //     echo "<script>setTimeout(()=>{window.location.href='home.php'},500)</script>";
+    // }else{
+    //     echo "Error";
         
-    }
+    // }
     
     if($resultados){
 //        print_r($resultados);
@@ -26,6 +27,7 @@
         $stmt->execute([$user->getId(), $user->getUsername(), $user->getPassword(), $user->getName(), $user->getAge(), $user->getSex(), $user->getAdm(), $user->getId()]);
         $resultados = $stmt->fetch(PDO::FETCH_ASSOC);
         
+        echo "USER UPDATE SUCCESSFUL";
         
     }else{
         echo "Error";
