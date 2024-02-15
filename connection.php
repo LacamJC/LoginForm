@@ -2,18 +2,18 @@
 
 
 
-//$username = 'root';
-//$password = '353heBeeh2BEGeG-DAhe2C2F4e433bEg';
-//$dbName = 'railway';
-//$port = '3306';
-//$host = 'viaduct.proxy.rlwy.net';
+$username = 'root';
+$password = 'b1D551AD-D6aH2FHgcGGd1b2d-G5DfHa';
+$dbName = 'railway';
+$port = '14490';
+$host = 'monorail.proxy.rlwy.net';
 
 
- $username = 'ramajo';
- $password = '123456';
- $dbName = 'LoginForm';
- $port = '3306';
- $host = '127.0.0.1';
+//  $username = 'ramajo';
+//  $password = '123456';
+//  $dbName = 'LoginForm';
+//  $port = '3306';
+//  $host = '127.0.0.1';
 try{
     $conn = new PDO('mysql:host='.$host.';port='.$port.';dbname='.$dbName, $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

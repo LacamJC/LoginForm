@@ -205,8 +205,8 @@
 
       <script type='text/javascript'>
         console.log("ASDDDDDDDDDDDD")
-//        url = 'https://loginform-production.up.railway.app//';
-           url = 'http://localhost/LoginForm/';
+       url = 'https://loginform-production.up.railway.app//';
+          //  url = 'http://localhost/LoginForm/';
         function getId(id){
             console.log(id)
             window.location.href=`${url}views/logado/delete.php?id=${id}`

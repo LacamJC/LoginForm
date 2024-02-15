@@ -9,8 +9,8 @@ $stmt = $conn->prepare($sql);
 $stmt->execute([$username, $password]);
 $resultados = $stmt->fetch(PDO::FETCH_ASSOC);
 
-//$url = 'https://loginform-production.up.railway.app//';
- $url = 'http://localhost/LoginForm/';
+$url = 'https://loginform-production.up.railway.app//';
+//  $url = 'http://localhost/LoginForm/';
 
 if ($resultados) {
     $_SESSION['username'] = $resultados['user_username'];
