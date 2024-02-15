@@ -12,7 +12,7 @@
     if($resultados)
     {
         echo "Sucessful changes commit at Database";
-        echo "<script>setTimeout(()=>{window.history.back()},1000)</script>";
+        echo "<script>setTimeout(()=>{window.location.href='home.php'},500)</script>";
     }else{
         echo "Error";
         
