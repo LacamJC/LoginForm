@@ -5,15 +5,16 @@
     require_once '../../models/Usuario.php';
     session_start();
    
-    $username = isset($_SESSION['username']) ? $_SESSION['username'] : null;
-    $password = isset($_SESSION['password']) ? $_SESSION['password'] : null;
-
+    $username = isset($_SESSION['username']) ? $_SESSION['username'] : $_GET['username'];
+    $password = isset($_SESSION['password']) ? $_SESSION['password'] : $_GET['password'];
+    // echo $username;
+    // echo "<br>". $password;
     if($username !== null){
         $sql = 'SELECT * FROM users where user_username = ? and user_password = ? LIMIT 1';
         $stmt = $conn->prepare($sql);
         $stmt->execute([$username, $password]);
         $resultados = $stmt->fetch(PDO::FETCH_ASSOC);
-    
+        // echo "Olá ".$resultados;
         $info = [];
         $control = 0;
         
@@ -30,9 +31,11 @@
     }else{
         exit();
     }
+
+    // print_r($user->getSex());
     
     
-//    print_r($user);
+  //  print_r($user);
 
 
 

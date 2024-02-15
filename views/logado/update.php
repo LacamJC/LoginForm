@@ -90,7 +90,7 @@
         <div class="mb-3">
             <label for="password">Password</label>
             <input type="password" class="form-control" value="<?=$user->getPassword()?>" id="password" required minlength="1" name="password">
-            <label for="checkOcult">Show</label> <input type="checkbox" name="" id="checkOcult"
+            <label for="checkOcult">Show</label> <input type="checkbox" name="" id="checkOcult">
         </div>
         
         <div class="mb-3">
@@ -106,8 +106,8 @@
          <div class='mb-3'>
              <select name='sex' class="form-select" aria-label="Default Select Example">
                 <option selected><?=$user->getSex()?></option>
-                <option value='M'>Male</option>
-                <option value='F'>Female</option>
+                <option value='Male'>Male</option>
+                <option value='Female'>Female</option>
              </select>
          </div>
         

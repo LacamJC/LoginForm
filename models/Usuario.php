@@ -35,7 +35,7 @@ class Usuario{
     public function getName(){return $this->name;}
     public function getAge(){return $this->age;}
     public funcTion getSex(){
-       return ($this->sex === 'M') ? "Male" : "Female"; 
+       return ($this->sex == 'Male') ? "Male" : "Female"; 
     }
     public function getAdm(){return $this->adm;}
   
