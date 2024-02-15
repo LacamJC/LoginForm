@@ -14,6 +14,17 @@ Este projeto é um sistema CRUD desenvolvido em PHP, utilizando a extensão PDO 
 
 - **Edição de Dados**: Permite a modificação de informações de usuários já existentes, possibilitando a atualização de dados como senha, nome, idade, etc.
 
+## Usuarios Root e Default já existentes 
+```bash
+    // Perfil adminstrador
+    Username = Root
+    Password = 000000
+
+    // Perfil Comum
+    Username = JbDefault
+    Password = 123456
+```
+
 ## Para rodar este projeto localmente
 
 - Caso use o xampp, procure a pasta htdocs e coloque a pasta deste projeto nela.
