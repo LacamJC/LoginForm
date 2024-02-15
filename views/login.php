@@ -1,4 +1,13 @@
+<?php
+    require_once '../models/Usuario.php';
+    session_start();
+    
+    $user = $_SESSION['user'];
+    print_r($user);
+    
+    
 
+?>
 
 <!doctype html>
 <html lang="pt-BR">
@@ -7,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="shortcut icon" href="../img/0-square-fill.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../public/img/0-square-fill.svg" type="image/x-icon">
   </head>
   <body>
      
@@ -16,12 +25,12 @@
           
           <div class='mb-3'>
               <label for='username'>Username</label>
-              <input type='text' class='form-control' name='username'>
+              <input type='text' class='form-control' name='username' value="<?=$user->getUsername()?>">
           </div>
           
           <div class='mb-3'>
               <label for='password'>Password</label>
-              <input type='password' class='form-control' name='password' id='password'>
+              <input type='password' class='form-control' name='password' id='password' value="<?=$user->getPassword()?>">
               <label for="checkOcult">Mostrar Senha</label> <input type="checkbox" name="" id="checkOcult">
           </div>
            <div id='aviso' class='alert' style='height: 50px ; display: flex; justify-content: center; align-items: center;'>
