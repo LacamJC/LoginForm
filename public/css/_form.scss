@@ -1,0 +1,48 @@
+@media screen and (min-width: 600px)
+{
+    body{
+        background-color: whitesmoke;
+    }
+    .form__form 
+    {
+        background-color: white;
+        width: 600px;
+        margin: 50px auto;
+        padding: 40px 60px;
+        border-radius: 9px;
+        transition: all 0.5s ease;
+
+        &:hover
+        {
+            transform: translateX(5px) translateY(5px);
+            box-shadow: -4px 4px 8px #0000005e;
+        }
+    }
+}
+
+
+@media screen and (max-width: 599px)
+{
+    body
+    {
+        .form__form{
+            padding: 30px;
+        }
+
+    }
+
+    .form__footer
+    {
+        // background-color: red;
+        display: flex;
+        flex-direction: column;
+
+        input[type="submit"]{
+            width: 90%;
+            margin: auto;
+        }
+        span{
+            text-align: center;
+        }
+    }
+}   

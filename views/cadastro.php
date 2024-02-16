@@ -35,19 +35,19 @@
     <title>Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="shortcut icon" href="../public/img/0-square-fill.svg" type="image/x-icon">
-    <link rel="stylesheet" href="../public/css/form.css">
+    <link rel="stylesheet" href="../public/css/main.css">
   </head>
   <body>
    
-    <form class="form my-5" action="<?=$_SERVER['PHP_SELF']?>" method="GET">
+    <form class="form__form my-5" action="<?=$_SERVER['PHP_SELF']?>" method="GET">
          <h1 class="text-center">Register</h1>
         <div class="mb-3">
-            <label for="username">Username</label>
+            <label for="username" class="form__label">Username</label>
             <input type="text" class="form-control" id="username" name="username" required autofocus>
         </div>
         
         <div class="mb-3">
-            <label for="password">Password</label>
+            <label for="password" class="form__label">Password</label>
             <input type="password" class="form-control" id="password" name="password" required maxlength="6">
             <p class="form-text">Max 6 lengths</p>
                
@@ -57,17 +57,17 @@
         </div>
             
         <div class="mb-3">
-            <label for="name">Name</label>
+            <label for="name" class="form__label">Name</label>
             <input type="text" class="form-control" id="name" name="name" required>
         </div>
         
         <div class="mb-3">
-            <label for="age">Age</label>
+            <label for="age" class="form__label">Age</label>
             <input type="number" class="form-control" id="age" name="age" required>
         </div>
         
          <div class='mb-3'>
-             <label for="">Sex</label>
+             <label for="" class="form__label">Sex</label>
              <select name='sex' class="form-select" aria-label="Default Select Example">
              <option selected>Select a sex</option>
              <option value='Male'>Male</option>
@@ -76,13 +76,15 @@
          </div>
          
          <div class="mb-3">
-             <label class="form-label">Admin User</label>
+             <label class="form-label" class="form__label">Admin User</label>
              <select name="adm" class="form-select">
                  <option value="0" selected>No</option> 
                  <option value="1">Yes</option>
              </select>
          </div>
-        <input type="submit" class="btn btn-primary w-25 text-center" value="Register"> <span>Already have an account? <a href="login.php">Log in.</a></span>
+        <div class="form__footer">
+            <input type="submit" class="btn btn-primary w-25 text-center" value="Register"> <span>Already have an account? <a href="login.php">Log in.</a></span>
+        </div>
     </form>
       
       <!-- <a href='javascript:history.go(-1)'>Voltar</a> -->

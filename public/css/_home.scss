@@ -1,0 +1,41 @@
+.opt
+{
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    align-items: center;
+    transition: all 0.5s ease;
+
+    img 
+{
+    width: 30px;
+    /* height: 100%; */
+    transform: scale(1.2);
+}
+}
+
+
+.remove
+{
+    background-color: #ffd6d688;
+
+    &:hover 
+    {
+        background-color: #ffd6d6;
+    }
+}
+
+
+.edit
+{
+    background-color: #8fdb93a1;
+
+    &:hover
+    {
+        background-color: #8FDB93;
+    }
+}

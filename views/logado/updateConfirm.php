@@ -28,7 +28,7 @@
         $stmt = $conn->prepare($sql);
         $stmt->execute([$user->getId(), $user->getUsername(), $user->getPassword(), $user->getName(), $user->getAge(), $user->getSex(), $user->getAdm(), $user->getId()]);
         $resultados = $stmt->fetch(PDO::FETCH_ASSOC);
-        $url = $_SESSION['url'];
+        $url = $_SESSION['_url'];
 
         if ($_SESSION['user']->getId() == $user->getId()) {
             echo "<br>VOCE ESTA ALTERANDO SEUS PRÓPRIOS DADOS</br>";
