@@ -44,18 +44,16 @@ $host = '127.0.0.1'; // Este está configurado para o localhost, mas caso possua
 
 Quando coloco este projeto no ar, utilizo o Railway, o que me faz ter que mudar certas configurações em alguns arquivos. Certifique-se de que não deixei estas configurações aqui.
 
-### Verifique o arquivo verificaLogin.php
-
-O arquivo deve estar configurado para a URL local desta maneira:
+### Verifique o arquivo config.php
 
 ```php
-//$url = 'https://loginform-production.up.railway.app//';
-$url = 'http://localhost/LoginForm/';
+<?php
+    session_start();
+
+    $_SESSION['_url'] = "http://localhost/LoginForm/";
+    // $_SESSION['url'] = "https://loginform-production-9cc6.up.railway.app/";
+
+
 ```
 
-### Verifique o arquivo home.php
-
-```javascript
-//url = 'https://loginform-production.up.railway.app//';
-url = 'http://localhost/LoginForm/';
-```
+Certifique-se de que a ultima linha esteja comentada para rodar o projeto localmente

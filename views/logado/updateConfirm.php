@@ -2,7 +2,8 @@
  
     require_once '../../connection.php';
     require_once '../../models/Usuario.php';
-    session_start();
+    include "../../config.php";
+
     $user = new Usuario($_GET['id'], $_GET['username'], $_GET['password'] ,$_GET['name'],$_GET['age'],$_GET['sex'], $_GET['adm']);
     
     $sql = 'SELECT * FROM users WHERE id = ?';
@@ -27,8 +28,7 @@
         $stmt = $conn->prepare($sql);
         $stmt->execute([$user->getId(), $user->getUsername(), $user->getPassword(), $user->getName(), $user->getAge(), $user->getSex(), $user->getAdm(), $user->getId()]);
         $resultados = $stmt->fetch(PDO::FETCH_ASSOC);
-        $url = 'http://localhost/LoginForm/views/verficaLogin.php';
-        // $url = 'https://loginform-production-9cc6.up.railway.app/views/verficaLogin.php';
+        $url = $_SESSION['url'];
 
         if ($_SESSION['user']->getId() == $user->getId()) {
             echo "<br>VOCE ESTA ALTERANDO SEUS PRÓPRIOS DADOS</br>";
@@ -37,12 +37,12 @@
             echo "<script>
                    
                         console.log('Redirecionando');
-                        window.location.href='" . $url . "?username=" . $_SESSION['username'] . "&password=" . $_SESSION['password'] . "';
+                        window.location.href='" . $url . "views/verficaLogin.php?username=" . $_SESSION['username'] . "&password=" . $_SESSION['password'] . "';
                     
                   </script>";
         } else {
             echo "USER UPDATE SUCCESSFUL";
-            echo "<script>window.location.href='" . $url . "?username=" . $_SESSION['username'] . "&password=" . $_SESSION['password'] . "'</script>";
+            echo "<script>window.location.href='" . $url . "views/verficaLogin.php?username=" . $_SESSION['username'] . "&password=" . $_SESSION['password'] . "'</script>";
         }
     }else{
         echo "Error";

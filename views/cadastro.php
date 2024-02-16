@@ -35,11 +35,12 @@
     <title>Register</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="shortcut icon" href="../public/img/0-square-fill.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../public/css/form.css">
   </head>
   <body>
    
-    <form class="container my-5" action="<?=$_SERVER['PHP_SELF']?>" method="GET">
-         <h1 class="text-center">Cadastro de Novo Usuário</h1>
+    <form class="form my-5" action="<?=$_SERVER['PHP_SELF']?>" method="GET">
+         <h1 class="text-center">Register</h1>
         <div class="mb-3">
             <label for="username">Username</label>
             <input type="text" class="form-control" id="username" name="username" required autofocus>
@@ -48,7 +49,11 @@
         <div class="mb-3">
             <label for="password">Password</label>
             <input type="password" class="form-control" id="password" name="password" required maxlength="6">
-            <label for="checkOcult">Mostrar Senha</label> <input type="checkbox" name="" id="checkOcult">
+            <p class="form-text">Max 6 lengths</p>
+               
+          
+            <label for="checkOcult">Mostrar Senha</label> <input type="checkbox" name="" id="checkOcult"> 
+       
         </div>
             
         <div class="mb-3">

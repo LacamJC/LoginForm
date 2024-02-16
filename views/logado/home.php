@@ -3,8 +3,9 @@
 
     require_once '../../connection.php';
     require_once '../../models/Usuario.php';
-    session_start();
-   
+    include "../../config.php";
+
+ 
     $username = isset($_SESSION['username']) ? $_SESSION['username'] : $_GET['username'];
     $password = isset($_SESSION['password']) ? $_SESSION['password'] : $_GET['password'];
     // echo $username;
@@ -50,49 +51,7 @@
     <title>Home </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="shortcut icon" href="../../public/img/0-square-fill.svg" type="image/x-icon">
-    <style>
-
-
-.opt
-{
-    border: none;
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    background-color: transparent;
-    align-items: center;
-    transition: all 0.5s ease;
-}
-
-.opt img 
-{
-    width: 30px;
-    /* height: 100%; */
-    transform: scale(1.2);
-}
-
-.remove
-{
-    background-color: #ffd6d688;
-}
-
-.remove:hover 
-{
-    background-color: #ffd6d6;
-}
-
-.edit
-{
-    background-color: #8fdb93a1;
-}
-
-.edit:hover
-{
-    background-color: #8FDB93;
-}
-    </style>
+    <link rel="stylesheet" href="../../public/css/home.css">
   </head>    
   <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -208,8 +167,7 @@
 
       <script type='text/javascript'>
         console.log("ASDDDDDDDDDDDD")
-       url = 'https://loginform-production-9cc6.up.railway.app/';
-          //  url = 'http://localhost/LoginForm/';
+           url = "<?=$_SESSION['url']?>";
         function getId(id){
             console.log(id)
             window.location.href=`${url}views/logado/delete.php?id=${id}`
