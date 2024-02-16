@@ -75,11 +75,11 @@ try{
        }else{
 //           echo "Usuario root nao existe";  
            try{
-               $sqlInsertRoot = "INSERT INTO users VALUES(1,'Root','000000','Root Manager',00,'M',1)";
+               $sqlInsertRoot = "INSERT INTO users VALUES(1,'Root','000000','Root Manager',00,'Male',1)";
                $stmtInsertRoot= $conn->prepare($sqlInsertRoot);
                $stmtInsertRoot->execute();
                
-               $sqlInsertDefault = "INSERT INTO users VALUES(2,'JbDefault', '123456', 'James Baxter', 22, 'M', 0)";
+               $sqlInsertDefault = "INSERT INTO users VALUES(2,'JbDefault', '123456', 'James Baxter', 22, 'Male', 0)";
                $stmtInsertDefault = $conn->prepare($sqlInsertDefault);
                $stmtInsertDefault->execute();
 //               echo "Usuario root e default inserido com sucesso";
