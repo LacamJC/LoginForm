@@ -1,3 +1,4 @@
+
 # LoginForm
 
 ### Descrição do Projeto
@@ -10,13 +11,13 @@ Este projeto é um sistema CRUD desenvolvido em PHP, utilizando a extensão PDO 
 
 - **Remoção de Usuário**: Possibilita a exclusão de usuários do banco de dados, removendo suas informações do sistema.
 
-- **Lista de Todos os Usuários para Perfil de Administrador**: Exibe uma lista completa de todos os usuários registrados no sistema, proporcionando uma visão geral para usuários com privilégios administrativos.
+- **Lista de Todos os Usuários para o Perfil de Administrador**: Exibe uma lista completa de todos os usuários registrados no sistema, proporcionando uma visão geral para usuários com privilégios administrativos.
 
 - **Edição de Dados**: Permite a modificação de informações de usuários já existentes, possibilitando a atualização de dados como senha, nome, idade, etc.
 
-## Usuarios Root e Default já existentes 
+## Usuários Root e Default já existentes 
 ```bash
-    // Perfil adminstrador
+    // Perfil administrador
     Username = Root
     Password = 000000
 
@@ -27,7 +28,7 @@ Este projeto é um sistema CRUD desenvolvido em PHP, utilizando a extensão PDO 
 
 ## Para rodar este projeto localmente
 
-- Caso use o xampp, procure a pasta htdocs e coloque a pasta deste projeto nela.
+- Caso use o XAMPP, procure a pasta htdocs e coloque a pasta deste projeto nela.
 - Você precisa de permissões de root no seu banco para melhor eficiência.
 
 ## Altere os dados no arquivo connection.php
@@ -53,7 +54,6 @@ Quando coloco este projeto no ar, utilizo o Railway, o que me faz ter que mudar 
     $_SESSION['_url'] = "http://localhost/LoginForm/";
     // $_SESSION['url'] = "https://loginform-production-9cc6.up.railway.app/";
 
-
 ```
 
-Certifique-se de que a ultima linha esteja comentada para rodar o projeto localmente
+Certifique-se de que a última linha esteja comentada para rodar o projeto localmente.
